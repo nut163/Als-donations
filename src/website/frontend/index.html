@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALS Prevention Non-Profit</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>ALS Prevention Non-Profit</h1>
+    </header>
+    <main>
+        <section id="ALSInfoSection">
+            <!-- ALS Information will be fetched and displayed here -->
+        </section>
+        <section id="nonProfitDetailsSection">
+            <!-- Non-profit organization details will be fetched and displayed here -->
+        </section>
+        <section id="donationForm">
+            <h2>Make a Donation</h2>
+            <form>
+                <label for="donationAmount">Donation Amount:</label>
+                <input type="number" id="donationAmount" name="donationAmount" min="1" required>
+                <div id="paypalButton"></div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Thank you for your support!</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/classes/Donation.js"></script>
+    <script src="js/classes/ALSInformation.js"></script>
+    <script src="js/classes/NonProfitOrganization.js"></script>
+    <script src="js/classes/PaypalIntegration.js"></script>
+</body>
+</html>

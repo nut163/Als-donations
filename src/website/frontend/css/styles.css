@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#donationForm {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+#ALSInfoSection, #nonProfitDetailsSection {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+#paypalButton {
+    background-color: #0070ba;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#paypalButton:hover {
+    background-color: #005a88;
+}
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.donationSuccess {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.donationFailure {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.ALSInfoUpdate, .nonProfitUpdate {
+    background-color: #cce5ff;
+    color: #004085;
+}
