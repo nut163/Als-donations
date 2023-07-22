@@ -1,0 +1,45 @@
+service: als-prevention
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  environment:
+    PAYPAL_CLIENT_ID: ${env:PAYPAL_CLIENT_ID}
+    PAYPAL_SECRET: ${env:PAYPAL_SECRET}
+
+functions:
+  processDonation:
+    handler: src/scripts/donate.processDonation
+    events:
+      - http:
+          path: donate
+          method: post
+          cors: true
+
+plugins:
+  - serverless-offline
+  - serverless-webpack
+
+custom:
+  webpack:
+    webpackConfig: 'webpack.config.js'
+    includeModules: true
+
+resources:
+  Resources:
+    DonationTable:
+      Type: 'AWS::DynamoDB::Table'
+      Properties:
+        TableName: 'Donations'
+        AttributeDefinitions:
+          - AttributeName: 'id'
+            AttributeType: 'S'
+        KeySchema:
+          - AttributeName: 'id'
+            KeyType: 'HASH'
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        StreamSpecification:
+          StreamViewType: 'NEW_AND_OLD_IMAGES'

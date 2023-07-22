@@ -1,0 +1,29 @@
+# .gitignore
+
+# Ignore node_modules
+node_modules/
+
+# Ignore dist folder
+dist/
+
+# Ignore .env files
+.env
+
+# Ignore cache files
+.cache/
+
+# Ignore logs
+*.log
+
+# Ignore package-lock.json
+package-lock.json
+
+# Ignore .DS_Store
+.DS_Store
+
+# Ignore npm-debug.log files
+npm-debug.log*
+
+# Ignore yarn-debug.log, yarn-error.log files
+yarn-debug.log*
+yarn-error.log*

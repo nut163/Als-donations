@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | ALS Prevention</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/donate.css">
+</head>
+<body>
+    <header>
+        <h1>Donate to ALS Prevention</h1>
+    </header>
+    <main id="donate-content">
+        <p>Your donation helps us in our mission to prevent ALS. Every contribution, no matter how small, makes a difference.</p>
+        <form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="donations@alsprevention.org">
+            <input type="hidden" name="item_name" value="Donation for ALS Prevention">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="text" name="amount" placeholder="Enter donation amount">
+            <input type="submit" id="donate-button" value="Donate Now">
+        </form>
+    </main>
+    <footer>
+        <p>Thank you for your support!</p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/donate.js"></script>
+</body>
+</html>

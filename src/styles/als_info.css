@@ -1,0 +1,39 @@
+/* src/styles/als_info.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#als-info-content {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.als-info-header {
+    font-size: 2em;
+    color: #0066cc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.als-info-text {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.als-info-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.als-info-link {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.als-info-link:hover {
+    text-decoration: underline;
+}
