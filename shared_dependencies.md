@@ -1,21 +1,29 @@
-1. "paypal-rest-sdk": This is a shared dependency across "website/js/paypal.js" and "website/node_modules/paypal-rest-sdk/index.js". It is the PayPal SDK that will be used to handle donations.
+1. Exported Variables:
+   - `donationAmount`: The amount of donation made by the user.
+   - `ALSInfo`: Information about ALS prevention.
+   - `nonProfitDetails`: Details about the non-profit organization.
+   - `paypalDetails`: Details about the PayPal integration.
 
-2. "serverless": This is a shared dependency across "website/serverless.yml", "website/node_modules/serverless-aws-documentation/index.js", "website/node_modules/serverless-offline/index.js", and "website/node_modules/serverless-python-requirements/index.js". It is the framework used to build serverless applications.
+2. Data Schemas:
+   - `DonationSchema`: Schema for the donation details.
+   - `ALSSchema`: Schema for the ALS prevention information.
+   - `NonProfitSchema`: Schema for the non-profit organization details.
+   - `PaypalSchema`: Schema for the PayPal integration details.
 
-3. "aws-documentation": This is a shared dependency across "website/serverless.yml" and "website/node_modules/serverless-aws-documentation/index.js". It is used to document the AWS services used in the serverless application.
+3. ID Names of DOM Elements:
+   - `donationForm`: The form for making donations.
+   - `ALSInfoSection`: The section displaying ALS prevention information.
+   - `nonProfitDetailsSection`: The section displaying non-profit organization details.
+   - `paypalButton`: The button for making donations via PayPal.
 
-4. "serverless-offline": This is a shared dependency across "website/serverless.yml" and "website/node_modules/serverless-offline/index.js". It is used to emulate AWS Lambda and API Gateway for speedier local development.
+4. Message Names:
+   - `donationSuccess`: Message displayed when donation is successful.
+   - `donationFailure`: Message displayed when donation fails.
+   - `ALSInfoUpdate`: Message displayed when ALS information is updated.
+   - `nonProfitUpdate`: Message displayed when non-profit details are updated.
 
-5. "serverless-python-requirements": This is a shared dependency across "website/serverless.yml" and "website/node_modules/serverless-python-requirements/index.js". It is used to automatically bundle dependencies from "requirements.txt" and make them available to your Python functions.
-
-6. "styles.css": This is a shared dependency across all HTML files ("index.html", "about.html", "donate.html", "contact.html", "als_info.html", "privacy_policy.html", "terms_conditions.html"). It contains the CSS styles that will be applied to these web pages.
-
-7. "main.js": This is a shared dependency across all HTML files. It contains the main JavaScript functions that will be used across these web pages.
-
-8. DOM Elements: The id names of DOM elements that JavaScript functions will use are shared across "main.js" and all HTML files. These could include elements like "donateButton", "contactForm", "alsInfo", etc.
-
-9. "package.json" and "package-lock.json": These files share dependencies with all JavaScript files and node modules. They contain the metadata about the project and specific versions of the dependencies used in the project.
-
-10. Message Names: These are shared across "paypal.js" and "main.js", and could include messages like "donationSuccess", "donationFailure", etc.
-
-11. Function Names: These are shared across "main.js" and "paypal.js", and could include functions like "processDonation", "validateForm", etc.
+5. Function Names:
+   - `handleDonation`: Function to handle donation process.
+   - `fetchALSInfo`: Function to fetch ALS prevention information.
+   - `fetchNonProfitDetails`: Function to fetch non-profit organization details.
+   - `initiatePaypal`: Function to initiate PayPal integration.
