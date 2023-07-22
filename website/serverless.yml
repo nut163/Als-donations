@@ -1,0 +1,43 @@
+service: als-prevention-website
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+
+plugins:
+  - serverless-offline
+  - serverless-python-requirements
+  - serverless-aws-documentation
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+  documentation:
+    api:
+      info:
+        version: '1.0.0'
+        title: ALS Prevention Website API
+        description: API for the ALS Prevention Website
+
+functions:
+  processDonation:
+    handler: website/js/paypal.processDonation
+    events:
+      - http:
+          path: donate
+          method: post
+          cors: true
+
+resources:
+  Resources:
+    DonationBucket:
+      Type: 'AWS::S3::Bucket'
+      Properties:
+        BucketName: ${self:provider.stage}-als-prevention-donations
+
+package:
+  exclude:
+    - node_modules/**
+    - venv/**
